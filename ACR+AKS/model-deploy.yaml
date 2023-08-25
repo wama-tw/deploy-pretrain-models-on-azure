@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tfserving-test-half-plus-two
+  labels:
+    app: tfserving-test-half-plus-two
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tfserving-test-half-plus-two
+  template:
+    metadata:
+      labels:
+        app: tfserving-test-half-plus-two
+    spec:
+      containers:
+      - name: tfserving-test-half-plus-two
+        image: wamaacr.azurecr.io/example-models-image:latest
+        env:
+        - name: MODEL_BASE_PATH
+          value: /var/azure-app/azure-models/tfserving-mounted
+        - name: MODEL_NAME
+          value: half_plus_two
+        ports:
+        - containerPort: 8501
