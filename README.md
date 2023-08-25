@@ -1,4 +1,4 @@
-# Deploy Pre-trained models on Azure
+# Deploy Pre-trained Models on Azure
 
 This porject contained full PowerShell script(`.ps1`) & config for deploying pre-trained models on Azure, with 3 solutions (deploy on Azure Kubernetes Services with Azure Container Register, Azure Container Instance with Azure Container Register, and Azure Machine Learning).
 
@@ -15,10 +15,12 @@ This porject contained full PowerShell script(`.ps1`) & config for deploying pre
 
 ## Run and Deploy Demo Model
 
-### Demo Model
-This example use the half-plus-two model.(input/2 + 2 = prediction)
+### Demo Model & Env Image
+This example use the half-plus-two model.(input/2 + 2 = prediction)
 
 Use the tensorflow/serving image as environment.
+
+(see [TensorFlow Serving with Docker](https://www.tensorflow.org/tfx/serving/docker) for more details)
 
 ### Run
 Clone the project
