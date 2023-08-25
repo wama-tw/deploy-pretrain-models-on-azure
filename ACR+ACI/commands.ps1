@@ -61,12 +61,12 @@ docker logout
 
 # " ========================== Above This Line Same as ACR + AKS Solution ========================== "
 
-# ""
-# ""
-# " ===== Enable Admin-User for ACI Deployment ====="
+""
+""
+" ===== Deploy to ACI using Admin-User (Need Azure Portal) ====="
 az acr update -n $env:ACR_NAME --admin-enabled true
+"Please check README for manually deploy ACI in Azure Portal"
 
-# ""
-# ""
-# " ===== Deploy to ACI using Serveice Principal ====="
-# ## Use Azure Portal (pls see the pngs & README)
+
+# $env:ACR_PASSWORD=az acr credential show -n $env:ACR_NAME --query 'passwords[0].value'
+# az container create -g $env:RESOURCE_GROUP --name $env:CONTAINER_NAME --image $env:ACR_LOGINSERVER/$env:IMAGE_NAME --registry-password $env:ACR_PASSWORD --registry-username $env:ACR_NAME # defualt Image registry username is same as ACR name
