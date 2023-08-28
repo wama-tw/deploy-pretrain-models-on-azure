@@ -55,4 +55,4 @@ Then, run the `ps1` commmands
 ./commmands.ps1
 ```
 
-> If you choose ACR+ACI solution, please check `deploy-ACI.md`
+> If you choose ACR+ACI solution, please check [`deploy-ACI.md`](https://github.com/wama-tw/deploy-pretrain-models-on-azure/blob/main/ACR%2BACI/deploy-ACI.md)
